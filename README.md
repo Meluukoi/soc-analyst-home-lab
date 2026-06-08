@@ -19,7 +19,7 @@ A controlled virtual lab environment was configured using Ubuntu Linux running i
 
 ## Traffic Analysis
   -ICMP Analysis
-## ICMP Echo Requests and Echo Replies were analyzed to observe connectivity testing behavior between the internal virtual machine and external hosts.
+ ICMP Echo Requests and Echo Replies were analyzed to observe connectivity testing behavior between the internal virtual machine and external hosts.
 ## Observations
 - Successful ICMP request/reply communication observed
 - Consistent TTL values identified
