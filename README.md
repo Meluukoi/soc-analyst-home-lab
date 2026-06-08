@@ -34,8 +34,27 @@ A controlled virtual lab environment was configured using Ubuntu Linux running i
 - Practiced SOC-style traffic investigation and documentation
 - Improved understanding of packet-level analysis workflows
 
+##  HTTPS / TLS Traffic Analysis
+Encrypted HTTPS traffic was analyzed to observe secure client-server communication and TLS session establishment behavior.
+### Observations
+- Multiple outbound TCP connections observed over port 443
+- TLSv1.2 encrypted sessions identified
+- TLS handshake activity captured, including:
+  - Client Key Exchange
+  - Change Cipher Spec
+  - Encrypted Handshake Messages
+- Encrypted application data successfully transmitted between client and remote host
+
+### Security Assessment
+The observed traffic appeared consistent with legitimate encrypted HTTPS browsing activity. No suspicious or anomalous encrypted traffic patterns were identified during analysis.
+
+
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
+
+
+
+
 
 
 
