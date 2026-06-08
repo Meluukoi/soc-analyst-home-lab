@@ -25,11 +25,7 @@ A controlled virtual lab environment was configured using Ubuntu Linux running i
 - Consistent TTL values identified
 - No signs of packet flooding or suspicious scanning behavior
 ## Security Assessment
-## The observed ICMP traffic appeared to be legitimate diagnostic traffic commonly associated with standard network connectivity testing.
-
-## Evidence
-Screenshots
-
+ The observed ICMP traffic appeared to be legitimate diagnostic traffic commonly associated with standard network connectivity testing.
 
 ## Key Learnings
 - Learned how to capture and inspect network packets using Wireshark
@@ -39,7 +35,7 @@ Screenshots
 - Improved understanding of packet-level analysis workflows
 
 ## Security Notes
-## Sensitive internal network information and identifiers were sanitized before publication.
+ Sensitive internal network information and identifiers were sanitized before publication.
 
 
 
