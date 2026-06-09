@@ -84,6 +84,42 @@ Observed DNS activity appeared consistent with legitimate user-generated browsin
 
 
 
+## Splunk Security Event Monitoring Lab
+
+Windows Security Event Logs were ingested into Splunk Enterprise to simulate SOC-style monitoring and authentication event analysis workflows.
+
+### Log Sources
+- Windows Security Event Logs
+- Windows System Logs
+- Windows Application Logs
+
+### Splunk Searches Performed
+
+#### Failed Login Detection
+```spl
+source="WinEventLog:Security" EventCode=4625
+```
+Observed failed Windows authentication attempts generated intentionally during lab testing.
+
+![Failed Login Detection](screenshots/splunk-failed-login-detection.png)
+
+Observed successful Windows authentication events.
+
+![Successful Login Detection](screenshots/splunk-successful-login-detection.png)
+
+#### Process Creation Monitoring
+```spl
+source="WinEventLog:Security" EventCode=4688
+```
+
+Used to identify process execution activity within the Windows environment.
+
+![Process Monitoring](screenshots/splunk-process-monitoring.png)
+
+### Security Assessment
+
+Splunk successfully ingested and indexed Windows event logs, allowing detection and investigation of authentication-related security events. Simulated failed login activity was successfully identified using Splunk search queries.
+
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
 
