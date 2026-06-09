@@ -65,6 +65,25 @@ Observed TCP behavior appeared consistent with legitimate encrypted web traffic 
 ![TCP Analysis](screenshots/tcp-handshake-analysis.png)
 
 
+
+##  DNS Traffic Analysis
+DNS traffic was analyzed to observe hostname resolution behavior and DNS query activity generated within the Ubuntu virtual machine environment.
+
+### Observations
+- Standard DNS queries and responses successfully captured
+- Both A (IPv4) and AAAA (IPv6) record lookups were identified
+- DNS communication observed between the local resolver and the external DNS server
+- Successful domain resolution confirmed for reddit.com
+
+### Security Assessment
+Observed DNS activity appeared consistent with legitimate user-generated browsing traffic and standard hostname resolution behavior. No suspicious or malicious domain requests were identified during analysis.
+
+## 📷 DNS Packet Capture
+
+![DNS Analysis](screenshots/dns-analysis.png)
+
+
+
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
 
