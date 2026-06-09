@@ -1,4 +1,4 @@
-# Wireshark SOC Traffic Analysis Lab
+# cybersecurity home-lab
  Project Overview
 This project simulates a basic Security Operations Center (SOC) traffic analysis investigation using Wireshark in a virtualized lab environment. The objective was to capture and analyze network traffic, including ICMP, DNS, TCP, and HTTPS communications, to better understand normal network behavior and foundational security analysis workflows.
 
