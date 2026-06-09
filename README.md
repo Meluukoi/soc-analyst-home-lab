@@ -48,6 +48,22 @@ Encrypted HTTPS traffic was analyzed to observe secure client-server communicati
 ### Security Assessment
 The observed traffic appeared consistent with legitimate encrypted HTTPS browsing activity. No suspicious or anomalous encrypted traffic patterns were identified during analysis.
 
+## TCP Handshake Analysis
+TCP connection establishment behavior was analyzed using Wireshark to observe the standard TCP three-way handshake process and session termination activity.
+
+### Observations
+- TCP SYN/ACK packets observed during HTTPS session establishment
+- ACK packets confirmed successful client-server communication
+- FIN/ACK packets identified during graceful TCP session termination
+- Multiple outbound TCP connections established over port 443
+
+  ### Security Assessment
+Observed TCP behavior appeared consistent with legitimate encrypted web traffic and standard client-server communication patterns. No suspicious or malformed TCP activity was identified during analysis.
+
+## 📷 TCP Packet Capture
+
+![TCP Analysis](screenshots/tcp-handshake-analysis.png)
+
 
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
