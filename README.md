@@ -365,11 +365,6 @@ Review of failed authentication activity within Splunk Enterprise.
 
 Investigate endpoint activity using Sysmon telemetry and Splunk Enterprise.
 
-## Security Notes
- Sensitive internal network information and identifiers were sanitized before publication.
-
-Investigate endpoint activity using Sysmon telemetry and Splunk Enterprise.
-
 ## Scenario
 
 A user reported unusual activity on their workstation.
@@ -406,6 +401,29 @@ The observed activity was determined to be normal user-generated behavior during
 
 No indicators of compromise were identified.
 
+## Screenshots
+
+### Process activity
+
+Sysmon Process Creation (Event ID 1) events were analyzed to identify user-executed processes. Command Prompt activity was successfully detected and investigated within Splunk Enterprise.
+
+![Process activity](screenshots/process-activity.png)
+
+### DNS query
+
+Sysmon DNS Query events were reviewed to identify domain resolution activity. The investigation confirmed successful detection of DNS requests generated through nslookup.
+
+![DNS Query](screenshots/dns-query.png)
+
+### Network activity
+
+Sysmon Network Connection (Event ID 3) events were analyzed to identify outbound network communications. The investigation captured destination IP addresses, ports, protocols, and associated processes.
+
+![Network Activity](screenshots/network-activity.png)
+
+
+## Security Notes
+ Sensitive internal network information and identifiers were sanitized before publication.
 
 
 
