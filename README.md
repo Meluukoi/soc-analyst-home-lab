@@ -333,19 +333,19 @@ The generated events simulated failed login activity that security teams commonl
 
 Shows Event ID 4625 events successfully indexed into Splunk.
 
-![Failed Login Detection](images/failed-login-detection.png)
+![Failed Login Detection](screenshots/failed-login-detection.png)
 
 ### Event Details Investigation
 
 Expanded Event ID 4625 event showing authentication details and failure information.
 
-![Event Details](images/event-details.png)
+![Event Details](screenshots/event-details.png)
 
 ### Security Event Analysis
 
 Review of failed authentication activity within Splunk Enterprise.
 
-![Security Analysis](images/security-analysis.png)
+![Security Analysis](screenshots/security-analysis.png)
 
 ---
 
