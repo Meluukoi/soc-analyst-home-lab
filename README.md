@@ -223,13 +223,17 @@ Results:
 
 ![Sysmon Splunk Ingestion](screenshots/sysmon-splunk-ingestion.png)
 
-### Troubleshooting Error
+### Troubleshooting Sysmon Collection
 
-*(Insert screenshot showing errorCode=5)*
+The Universal Forwarder initially failed to subscribe to the Sysmon Operational event channel due to insufficient permissions.
 
-### Successful Ingestion
+![Sysmon Troubleshooting](screenshots/sysmon-errorcode5-troubleshooting.png)
 
-*(Insert screenshot showing Sysmon events searchable in Splunk)*
+### Successful Resolution
+
+After reconfiguring the Splunk Universal Forwarder service to run as Local System, Sysmon events were successfully ingested into Splunk.
+
+![Sysmon Resolution](screenshots/sysmon-resolution.png)
 
 
 
