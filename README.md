@@ -219,9 +219,9 @@ Results:
 
 ![Sysmon Event Viewer](screenshots/sysmon-event-viewer.png)
 
-### Sysmon Events in Splunk
+### Sysmon Events Successfully Indexed in Splunk
 
-*(Insert screenshot)*
+![Sysmon Splunk Ingestion](screenshots/sysmon-splunk-ingestion.png)
 
 ### Troubleshooting Error
 
