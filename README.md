@@ -359,11 +359,52 @@ Review of failed authentication activity within Splunk Enterprise.
 - Brute Force Detection Fundamentals
 - SOC Investigation Workflow
 
+# Windows Incident Investigation Lab
+
+## Objective
+
+Investigate endpoint activity using Sysmon telemetry and Splunk Enterprise.
 
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
 
+Investigate endpoint activity using Sysmon telemetry and Splunk Enterprise.
 
+## Scenario
+
+A user reported unusual activity on their workstation.
+
+The investigation focused on identifying executed processes, network activity, and DNS queries using Sysmon telemetry.
+
+## Investigation Steps
+
+### Process Activity
+
+Reviewed Sysmon Process Creation events.
+
+### Network Activity
+
+Reviewed Sysmon Network Connection events.
+
+### DNS Activity
+
+Reviewed Sysmon DNS Query events.
+
+## Findings
+
+The following activity was observed:
+
+- Command Prompt execution
+- PowerShell execution
+- DNS lookups
+- Network connections
+- User activity
+
+## Conclusion
+
+The observed activity was determined to be normal user-generated behavior during testing.
+
+No indicators of compromise were identified.
 
 
 
