@@ -236,7 +236,128 @@ After reconfiguring the Splunk Universal Forwarder service to run as Local Syste
 ![Sysmon Resolution](screenshots/sysmon-resolution.png)
 
 
+## Brute Force Detection Lab
 
+## Objective
+
+The objective of this lab was to detect and investigate failed Windows authentication attempts using Splunk Enterprise.
+
+Windows Security Event Logs were collected and analyzed to identify Event ID 4625 failed logon events. This lab demonstrates how a SOC analyst can monitor authentication activity, investigate login failures, and identify indicators of brute force attack activity.
+
+---
+
+## Tools Used
+
+- Splunk Enterprise
+- Windows Event Viewer
+- Windows Security Logs
+- Windows Command Prompt
+- Windows Authentication Events
+
+---
+
+## Log Sources
+
+### Windows Security Log
+
+The following security events were analyzed:
+
+- Event ID 4625 - Failed Logon
+- Event ID 4624 - Successful Logon
+
+---
+
+## Detection Query
+
+### Failed Login Detection
+
+```spl
+source="WinEventLog:Security"
+EventCode=4625
+```
+
+This search returns failed Windows authentication attempts collected from the Security Event Log.
+
+---
+
+## Investigation Process
+
+Multiple failed login attempts were generated within the lab environment and successfully indexed into Splunk.
+
+The investigation focused on Event ID 4625 events, which provide valuable authentication details including:
+
+- Account Name
+- Account Domain
+- Source Network Address
+- Authentication Package
+- Logon Process
+- Failure Reason
+
+These fields allow analysts to determine who attempted the login, where it originated from, and why the authentication failed.
+
+---
+
+## Validation
+
+The following search confirmed successful ingestion of failed login events:
+
+```spl
+source="WinEventLog:Security"
+EventCode=4625
+```
+
+Results confirmed:
+
+- Failed authentication attempts were successfully indexed
+- Security events were searchable within Splunk
+- Authentication failures could be investigated through event metadata
+
+---
+
+## Security Assessment
+
+Splunk successfully detected failed Windows authentication attempts through Event ID 4625 monitoring.
+
+The generated events simulated failed login activity that security teams commonly investigate when looking for:
+
+- Brute Force Attacks
+- Password Spraying
+- Unauthorized Access Attempts
+- Account Enumeration Activity
+
+---
+
+## Screenshots
+
+### Failed Login Detection
+
+Shows Event ID 4625 events successfully indexed into Splunk.
+
+![Failed Login Detection](images/failed-login-detection.png)
+
+### Event Details Investigation
+
+Expanded Event ID 4625 event showing authentication details and failure information.
+
+![Event Details](images/event-details.png)
+
+### Security Event Analysis
+
+Review of failed authentication activity within Splunk Enterprise.
+
+![Security Analysis](images/security-analysis.png)
+
+---
+
+## Key Learnings
+
+- Windows Security Event Monitoring
+- Authentication Log Analysis
+- Event ID 4625 Investigation
+- Splunk Search Techniques
+- Security Event Correlation
+- Brute Force Detection Fundamentals
+- SOC Investigation Workflow
 
 
 ## Security Notes
