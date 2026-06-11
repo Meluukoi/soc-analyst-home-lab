@@ -215,9 +215,9 @@ Results:
 
 ## Screenshots
 
-### Sysmon Event Viewer
+### Sysmon Event Viewer - Process Creation Events
 
-*(Insert screenshot)*
+![Sysmon Event Viewer](screenshots/sysmon-event-viewer.png)
 
 ### Sysmon Events in Splunk
 
