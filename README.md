@@ -120,6 +120,111 @@ Used to identify process execution activity within the Windows environment.
 
 Splunk successfully ingested and indexed Windows event logs, allowing detection and investigation of authentication-related security events. Simulated failed login activity was successfully identified using Splunk search queries.
 
+
+Sysmon Endpoint Monitoring
+
+Project Objective
+
+The objective of this phase of the home lab was to deploy Sysmon on a Windows host and integrate Sysmon telemetry into Splunk Enterprise for enhanced endpoint visibility and security monitoring.
+
+Tools Used
+Sysmon
+Splunk Enterprise
+Splunk Universal Forwarder
+Windows Event Viewer
+Windows Command Prompt
+Lab Configuration
+
+A Windows endpoint was configured with Sysmon to generate detailed endpoint telemetry, including process creation activity. Splunk Universal Forwarder was configured to collect Sysmon Operational logs and forward them to Splunk Enterprise for centralized analysis.
+
+Deployment Steps
+Sysmon Installation
+
+Sysmon was installed on the Windows host using a custom XML configuration file.
+
+Log Verification
+
+Sysmon Operational logs were verified within:
+
+Applications and Services Logs
+└── Microsoft
+    └── Windows
+        └── Sysmon
+            └── Operational
+
+Event ID 1 (Process Creation) events were successfully generated and observed.
+
+Splunk Forwarding Configuration
+
+The Splunk Universal Forwarder was configured to collect:
+
+Microsoft-Windows-Sysmon/Operational
+
+and forward events to Splunk Enterprise for indexing and analysis.
+
+Troubleshooting and Investigation
+
+During deployment, Sysmon events were not initially appearing within Splunk despite being visible in Windows Event Viewer.
+
+Investigation Process
+
+The following troubleshooting steps were performed:
+
+Verified Sysmon Operational logging was enabled
+Confirmed Event ID 1 events existed within Event Viewer
+Verified Universal Forwarder connectivity to Splunk
+Reviewed Splunk Universal Forwarder log files
+Identified repeated subscription failures for the Sysmon event channel
+
+Error observed:
+
+Could not subscribe to Windows Event Log channel
+Microsoft-Windows-Sysmon/Operational
+
+errorCode=5
+Root Cause
+
+The Splunk Universal Forwarder service account did not have sufficient permissions to subscribe to the Sysmon Operational event channel.
+
+Resolution
+
+The Universal Forwarder service was reconfigured to run under:
+
+Local System
+
+After restarting the service, Sysmon events were successfully collected and forwarded to Splunk.
+
+Validation
+
+Successful ingestion of Sysmon telemetry was confirmed using the following Splunk search:
+
+source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
+
+Results confirmed:
+
+Successful log ingestion
+Process Creation telemetry collection
+Continuous endpoint activity monitoring
+Thousands of indexed Sysmon events
+
+Security Analysis
+
+Sysmon provides enhanced endpoint visibility beyond standard Windows Event Logs.
+
+Observed telemetry included:
+
+Process creation activity
+Parent-child process relationships
+Command-line execution details
+User context information
+Application execution tracking
+
+This telemetry improves detection capabilities for suspicious process execution and endpoint-based threats.
+
+
+
+
+
 ## Security Notes
  Sensitive internal network information and identifiers were sanitized before publication.
 
