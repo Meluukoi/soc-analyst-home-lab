@@ -1,5 +1,4 @@
 # SOC Analyst Home Lab
-Enterprise Security Operations Center (SOC) Environment
 
 This project documents the enterprise-style Security Operations Center (SOC) lab that serves as the foundation for every repository in my cybersecurity portfolio.
 
