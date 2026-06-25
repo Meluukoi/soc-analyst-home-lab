@@ -1,30 +1,6 @@
 # SOC Analyst Home Lab
 Enterprise Security Operations Center (SOC) Environment
 
- Project Overview
- Internet
-      │
-      ▼
-Windows Workstation
-      │
-      ▼
-Sysmon
-      │
-      ▼
-Splunk Universal Forwarder
-      │
-      ▼
-Splunk Enterprise
-      │
-      ▼
-Detection Engineering
-      │
-      ▼
-Threat Hunting
-      │
-      ▼
-Incident Response
-
 This project documents the enterprise-style Security Operations Center (SOC) lab that serves as the foundation for every repository in my cybersecurity portfolio.
 
 ## Tools Used
